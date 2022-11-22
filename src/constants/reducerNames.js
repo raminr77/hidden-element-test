@@ -1,3 +1,3 @@
 export const REDUCER_NAMES = {
-    USER: "USER"
+    APP: "APP"
 };

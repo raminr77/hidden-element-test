@@ -6,6 +6,8 @@ import { store } from 'store';
 import { Routes } from 'routes';
 import reportWebVitals from 'reportWebVitals';
 
+import 'styles/index.min.css';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
