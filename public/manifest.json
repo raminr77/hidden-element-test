@@ -12,6 +12,6 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#D84861",
-  "background_color": "#F8FAFB",
+  "background_color": "#F4F5F7",
   "description": "A Test For Hidden Elements (Pizza Wizard)"
 }

@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { REDUCER_NAMES } from 'constants/reducerNames';
 
 const initialState = {
-  darkMode: true
+  darkMode: false
 };
 
 const appSlice = createSlice({

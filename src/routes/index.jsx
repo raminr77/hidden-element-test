@@ -6,8 +6,9 @@ import {
 } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { ScrollToTop } from 'routes/ScrollToTop';
-import { appSelectors } from 'store/appData/appSelectors';
+import { ScrollToTop } from 'routes/scroll-to-top';
+import { appSelectors } from 'store/app-data/app-selectors';
+import { HOME_URL, NOT_FOUNT_URL } from 'constants/appRoutes';
 
 // PAGES
 import { HomePage } from 'pages';
@@ -28,9 +29,9 @@ function Routes() {
     <Router>
       <ScrollToTop />
       <Switch>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/404/" element={<NotFoundPage />} />
-        <Route path="*" element={<Navigate to="/404/" />} />
+        <Route path={HOME_URL} element={<HomePage />} exact />
+        <Route path={NOT_FOUNT_URL} element={<NotFoundPage />} />
+        <Route path="*" element={<Navigate to={NOT_FOUNT_URL} />} />
       </Switch>
     </Router>
   );

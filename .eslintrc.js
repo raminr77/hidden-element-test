@@ -21,6 +21,7 @@ module.exports = {
     'no-plusplus': 'off',
     'no-unused-vars': 'off',
     'no-cond-assign': 'off',
+    'react/prop-types': 'off',
     'prettier/prettier': 'error',
     'no-restricted-syntax': 'off',
     'import/no-unresolved': 'off',
