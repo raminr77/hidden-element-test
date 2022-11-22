@@ -1,8 +1,9 @@
+/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 import { REDUCER_NAMES } from 'constants/reducerNames';
 
 const initialState = {
-  darkMode: true,
+  darkMode: true
 };
 
 const appSlice = createSlice({

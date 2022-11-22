@@ -1,3 +1,5 @@
-export const REDUCER_NAMES = {
-    APP: "APP"
+const REDUCER_NAMES = {
+  APP: 'APP'
 };
+
+export { REDUCER_NAMES };
