@@ -15,7 +15,9 @@ module.exports = {
       lightHover: '#ffffff',
       dark: '#111418',
       darkHover: '#1a1e24',
-      transparent: 'transparent'
+      transparent: 'transparent',
+      success: '#43A047',
+      successHover: '#4CAF50'
     }
   },
   plugins: []

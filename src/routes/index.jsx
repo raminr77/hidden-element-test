@@ -15,6 +15,7 @@ import { DARK_MODE_STORAGE_KEY } from 'constants/local-storage-keys';
 import {
   HOME_URL,
   ABOUT_US_URL,
+  THANK_YOU_URL,
   NOT_FOUNT_URL,
   CONTACT_US_URL,
   WITH_HIDDEN_ELEMENT_URL,
@@ -24,6 +25,7 @@ import {
 import { HomePage } from 'pages';
 import { NotFoundPage } from 'pages/404';
 import { AboutUsPage } from 'pages/about-us';
+import { ThankYouPage } from 'pages/thank-you';
 import { ContactUsPage } from 'pages/contact-us';
 import { WithHiddenElementPage } from 'pages/with-hidden-element-page';
 import { WithoutHiddenElementPage } from 'pages/without-hidden-element-page';
@@ -44,6 +46,7 @@ function Routes() {
             path={WITHOUT_HIDDEN_ELEMENT_URL}
             element={<WithoutHiddenElementPage />}
           />
+          <Route path={THANK_YOU_URL} element={<ThankYouPage />} />
           <Route path={ABOUT_US_URL} element={<AboutUsPage />} />
           <Route path={CONTACT_US_URL} element={<ContactUsPage />} />
           <Route path={NOT_FOUNT_URL} element={<NotFoundPage />} />

@@ -5,8 +5,10 @@ import { titleGenerator } from 'utils/title-generator';
 function WithoutHiddenElementPage() {
   titleGenerator();
   return (
-    <div>
-      <Link to={HOME_URL}>[ Home Page ]</Link>
+    <div className="flex items-center justify-center">
+      <Link to={HOME_URL} className="mt-5">
+        [ Home Page ]
+      </Link>
     </div>
   );
 }

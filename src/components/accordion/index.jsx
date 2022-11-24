@@ -8,7 +8,7 @@ function Accordion({ title, children, description, active = false, disabled = fa
   const toggleActive = () => setIsActive(!isActive);
 
   return (
-    <div className="mx-5 my-2 rounded-lg overflow-hidden border">
+    <div className="w-full mb-3 rounded-lg overflow-hidden border">
       <button
         type="button"
         onClick={toggleActive}
