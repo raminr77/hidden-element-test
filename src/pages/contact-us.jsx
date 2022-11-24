@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Input } from 'components/input';
 import { StaticPageLayout } from 'layouts/static-page';
+import { titleGenerator } from 'utils/title-generator';
 
 const INIT_DATA = { email: '', message: '', fullName: '' };
 
 function ContactUsPage() {
+  titleGenerator('Contact Us');
   const [errorMessages, setErrorMessages] = useState([]);
   const [formInputData, setFormInputData] = useState(INIT_DATA);
 

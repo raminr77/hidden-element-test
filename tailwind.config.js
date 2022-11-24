@@ -6,6 +6,7 @@ module.exports = {
     extend: {},
     colors: {
       gray: '#cccccc',
+      grayHover: '#dddddd',
       primary: '#c32a44',
       primaryHover: '#D84861',
       secondary: '#FBC970',

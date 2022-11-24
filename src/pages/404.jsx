@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import { HOME_URL } from 'constants/app-routes';
+import { titleGenerator } from 'utils/title-generator';
 
 import WARNING_IMAGE from 'assets/warning.svg';
 
 function NotFoundPage() {
+  titleGenerator('Not Found');
   return (
     <div className="dark:text-light w-full h-screen flex flex-col justify-center items-center">
       <img alt="404" width={300} src={WARNING_IMAGE} className="mb-8" />

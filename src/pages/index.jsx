@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { StaticPageLayout } from 'layouts/static-page';
+import { titleGenerator } from 'utils/title-generator';
 
 import {
   WITH_HIDDEN_ELEMENT_URL,
@@ -7,6 +8,7 @@ import {
 } from 'constants/app-routes';
 
 function HomePage() {
+  titleGenerator();
   return (
     <StaticPageLayout hasWave>
       <div className="w-full flex flex-col items-center justify-center mt-20">

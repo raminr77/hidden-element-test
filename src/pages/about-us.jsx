@@ -1,6 +1,8 @@
 import { StaticPageLayout } from 'layouts/static-page';
+import { titleGenerator } from 'utils/title-generator';
 
 function AboutUsPage() {
+  titleGenerator('About Us');
   return (
     <StaticPageLayout title="About Us">
       <div className="w-full text-left leading-7">
