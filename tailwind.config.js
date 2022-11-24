@@ -5,10 +5,16 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      primary: '#D84861',
-      primaryHover: '#c32a44',
+      gray: '#cccccc',
+      primary: '#c32a44',
+      primaryHover: '#D84861',
+      secondary: '#FBC970',
+      secondaryHover: '#f7d28d',
       light: '#F4F5F7',
-      dark: '#111418'
+      lightHover: '#ffffff',
+      dark: '#111418',
+      darkHover: '#1a1e24',
+      transparent: 'transparent'
     }
   },
   plugins: []

@@ -10,15 +10,14 @@ import MOON_IMAGE from 'assets/moon.svg';
 
 function DarkModeButton({ className }) {
   const { darkMode } = useSelector(appSelectors.appData);
-
-  const toggleTheme = () => store.dispatch(toggleDarkMode());
+  const toggleTheme = () => store.dispatch(toggleDarkMode(!darkMode));
 
   return (
     <button
       type="button"
       onClick={toggleTheme}
       className={classNames(
-        'animate__animated animate__rotateIn hover:animate-pulse flex items-center justify-center w-11 h-11 rounded-full outline-0 bg-dark dark:bg-light',
+        'z-50 animate__animated animate__rotateIn hover:animate-pulse flex items-center justify-center w-11 h-11 rounded-full outline-0 bg-dark dark:bg-light',
         className
       )}
     >

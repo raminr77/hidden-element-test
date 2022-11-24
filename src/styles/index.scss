@@ -21,6 +21,10 @@ body {
   font-family: 'M PLUS 1p', sans-serif;
 }
 
-.title-font {
+.pw-title-font {
   font-family: 'Handlee', cursive;
+}
+
+.pw-page-fit {
+  height: calc(100vh - 68px);
 }
