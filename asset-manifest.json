@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/hidden-element-test/static/css/main.8d39b145.css",
+    "main.js": "/hidden-element-test/static/js/main.e1bf9a08.js",
+    "static/js/787.2a620769.chunk.js": "/hidden-element-test/static/js/787.2a620769.chunk.js",
+    "static/media/warning.svg": "/hidden-element-test/static/media/warning.b6ac204a5625c8eeca689ee132c68b6e.svg",
+    "index.html": "/hidden-element-test/index.html",
+    "static/media/sun.svg": "/hidden-element-test/static/media/sun.c394a6d670a30f74bf929a528c839172.svg",
+    "static/media/wave.svg": "/hidden-element-test/static/media/wave.bd92f445f9c330069551f8e8fbd05d2b.svg",
+    "static/media/moon.svg": "/hidden-element-test/static/media/moon.ae7ccf1d0a048a5bfdc55bee2d7155cc.svg",
+    "main.8d39b145.css.map": "/hidden-element-test/static/css/main.8d39b145.css.map",
+    "main.e1bf9a08.js.map": "/hidden-element-test/static/js/main.e1bf9a08.js.map",
+    "787.2a620769.chunk.js.map": "/hidden-element-test/static/js/787.2a620769.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d39b145.css",
+    "static/js/main.e1bf9a08.js"
+  ]
+}
