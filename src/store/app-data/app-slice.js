@@ -6,6 +6,7 @@ import { DARK_MODE_STORAGE_KEY } from 'constants/local-storage-keys';
 const initialState = {
   userAge: '',
   userJob: '',
+  userEmail: '',
   totalPrice: 0,
   darkMode: !!localStorage.getItem(DARK_MODE_STORAGE_KEY)
 };
@@ -20,10 +21,13 @@ const appSlice = createSlice({
     setUserDataAction: (state, action) => {
       state.userAge = action.payload.age;
       state.userJob = action.payload.job;
+    },
+    setUserEmailAction: (state, action) => {
+      state.userEmail = action.payload;
     }
   }
 });
 
-export const { setUserDataAction, toggleDarkMode } = appSlice.actions;
+export const { setUserDataAction, setUserEmailAction, toggleDarkMode } = appSlice.actions;
 
 export default appSlice.reducer;

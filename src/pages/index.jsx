@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import { store } from 'store';
 import { titleGenerator } from 'utils/title-generator';
 import { setUserDataAction } from 'store/app-data/app-slice';
-import { DarkModeButton } from 'components/dark-mode-button';
 import { START_TIME_STORAGE_KEY } from 'constants/local-storage-keys';
 import { HIDDEN_ELEMENT_PAGE_URL, VISIBLE_ELEMENT_PAGE_URL } from 'constants/app-routes';
 
@@ -52,13 +51,17 @@ function HomePage() {
 
   return (
     <div className="p-5 w-full max-w-sm mx-auto h-screen flex flex-col items-center justify-center gap-y-4">
-      <img alt="PIZZA WIZARD" src={LOGO_IMAGE} className="mb-5" />
+      <img
+        src={LOGO_IMAGE}
+        alt="PIZZA WIZARD"
+        className="mb-5 animate__animated animate__bounceIn"
+      />
 
-      <div className="flex flex-col w-full text-sm bg-slate-100 dark:bg-slate-600 p-4 rounded-lg">
-        <h3 className="mb-2 font-bold">Your Tasks:</h3>
-        <ul>
-          <li className="mb-2">1 - Join to our newsletter.</li>
-          <li>2 - Order your favorite pizza.</li>
+      <div className="animate__animated shadow-md animate__fadeIn flex flex-col w-full text-sm bg-slate-100 dark:bg-slate-600 p-4 rounded-lg">
+        <h3 className="mb-2 font-bold text-md">Your Tasks:</h3>
+        <ul className="flex flex-col gap-y-2 w-full">
+          <li>1 - Join To Our Newsletters.</li>
+          <li>2 - Order Your Favorite Pizza.</li>
         </ul>
       </div>
 
@@ -101,8 +104,6 @@ function HomePage() {
       >
         Hidden Element Test
       </button>
-
-      <DarkModeButton className="absolute top-4 left-4" />
     </div>
   );
 }
