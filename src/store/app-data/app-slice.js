@@ -4,8 +4,9 @@ import { REDUCER_NAMES } from 'constants/reducer-names';
 import { DARK_MODE_STORAGE_KEY } from 'constants/local-storage-keys';
 
 const initialState = {
+  userAge: '',
+  userJob: '',
   totalPrice: 0,
-  headerTitle: '',
   darkMode: !!localStorage.getItem(DARK_MODE_STORAGE_KEY)
 };
 
@@ -16,12 +17,13 @@ const appSlice = createSlice({
     toggleDarkMode: (state) => {
       state.darkMode = !state.darkMode;
     },
-    changeHeaderTitle: (state, action) => {
-      state.headerTitle = action.payload;
+    setUserDataAction: (state, action) => {
+      state.userAge = action.payload.age;
+      state.userJob = action.payload.job;
     }
   }
 });
 
-export const { changeHeaderTitle, toggleDarkMode } = appSlice.actions;
+export const { setUserDataAction, toggleDarkMode } = appSlice.actions;
 
 export default appSlice.reducer;
