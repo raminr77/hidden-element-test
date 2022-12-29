@@ -12,7 +12,11 @@ function NotFoundPage() {
       <div className="animate__animated animate__bounceIn pw-title-font text-3xl dark:text-primary">
         404 - Page Not Found
       </div>
-      <Link to={HOME_URL} className="animate__animated animate__fadeIn text-sm mt-6">
+      <Link
+        to={HOME_URL}
+        data-click="back-btn"
+        className="animate__animated animate__fadeIn text-sm mt-6"
+      >
         [ Home Page ]
       </Link>
     </div>

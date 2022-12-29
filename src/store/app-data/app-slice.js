@@ -4,10 +4,11 @@ import { REDUCER_NAMES } from 'constants/reducer-names';
 import { DARK_MODE_STORAGE_KEY } from 'constants/local-storage-keys';
 
 const initialState = {
+  cart: {},
+  clicks: [],
   userAge: '',
   userJob: '',
   userEmail: '',
-  totalPrice: 0,
   darkMode: !!localStorage.getItem(DARK_MODE_STORAGE_KEY)
 };
 
@@ -24,10 +25,34 @@ const appSlice = createSlice({
     },
     setUserEmailAction: (state, action) => {
       state.userEmail = action.payload;
+    },
+    updateCartAction: (state, action) => {
+      const currentCart = state.cart;
+      currentCart[action.payload.name] = action.payload.price;
+      state.cart = currentCart;
+    },
+    resetAction: (state) => {
+      state.userEmail = '';
+      state.userAge = '';
+      state.userJob = '';
+      state.clicks = [];
+      state.cart = {};
+    },
+    clickAction: (state, action) => {
+      const currentClicks = state.clicks;
+      currentClicks.push(action.payload);
+      state.clicks = currentClicks;
     }
   }
 });
 
-export const { setUserDataAction, setUserEmailAction, toggleDarkMode } = appSlice.actions;
+export const {
+  resetAction,
+  clickAction,
+  toggleDarkMode,
+  updateCartAction,
+  setUserDataAction,
+  setUserEmailAction
+} = appSlice.actions;
 
 export default appSlice.reducer;

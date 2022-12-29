@@ -6,6 +6,7 @@ function BackButton({ className }) {
   return (
     <button
       type="button"
+      data-click="back-btn"
       onClick={() => navigate(-1)}
       className={classNames('text-sm', className)}
     >

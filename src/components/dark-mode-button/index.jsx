@@ -16,6 +16,7 @@ function DarkModeButton({ className }) {
     <button
       type="button"
       onClick={toggleTheme}
+      data-click="dark-mode-btn"
       className={classNames(
         'z-50 animate__animated animate__rotateIn hover:animate-pulse flex items-center justify-center w-11 h-11 rounded-full outline-0 bg-slate-700 dark:bg-slate-50',
         className

@@ -47,7 +47,12 @@ function NewslettersPage() {
           />
         </div>
 
-        <button type="button" onClick={submit} className={classes.button}>
+        <button
+          type="button"
+          onClick={submit}
+          data-click="cta-btn"
+          className={classes.button}
+        >
           Join
         </button>
 

@@ -92,6 +92,7 @@ function HomePage() {
 
       <button
         type="button"
+        data-click="cta-btn"
         className={classes.button}
         onClick={onStart(TESTS.VISIBLE_ELEMENT)}
       >
@@ -99,6 +100,7 @@ function HomePage() {
       </button>
       <button
         type="button"
+        data-click="cta-btn"
         className={classes.button}
         onClick={onStart(TESTS.HIDDEN_ELEMENT)}
       >
