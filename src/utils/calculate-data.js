@@ -29,7 +29,6 @@ export const calculateData = async (user, data = [], logInConsole = true) => {
   };
 
   if (logInConsole) {
-    console.log('Data: ', data);
     console.log('Your Data: ', result);
   }
 
