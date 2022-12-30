@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { HOME_URL } from 'constants/app-routes';
+import { CLICK_NAMES } from 'constants/click-names';
 import { titleGenerator } from 'utils/title-generator';
 
 import WARNING_IMAGE from 'assets/warning.svg';
@@ -14,7 +15,7 @@ function NotFoundPage() {
       </div>
       <Link
         to={HOME_URL}
-        data-click="back-btn"
+        data-click={CLICK_NAMES.BACK}
         className="animate__animated animate__fadeIn text-sm mt-6"
       >
         [ Home Page ]

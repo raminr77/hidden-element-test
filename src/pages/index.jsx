@@ -3,6 +3,7 @@ import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 
 import { store } from 'store';
+import { CLICK_NAMES } from 'constants/click-names';
 import { titleGenerator } from 'utils/title-generator';
 import { setUserDataAction } from 'store/app-data/app-slice';
 import { START_TIME_STORAGE_KEY } from 'constants/local-storage-keys';
@@ -92,16 +93,16 @@ function HomePage() {
 
       <button
         type="button"
-        data-click="cta-btn"
         className={classes.button}
+        data-click={CLICK_NAMES.CTA_BTN}
         onClick={onStart(TESTS.VISIBLE_ELEMENT)}
       >
         Visible Element Test
       </button>
       <button
         type="button"
-        data-click="cta-btn"
         className={classes.button}
+        data-click={CLICK_NAMES.CTA_BTN}
         onClick={onStart(TESTS.HIDDEN_ELEMENT)}
       >
         Hidden Element Test

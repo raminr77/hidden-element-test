@@ -3,6 +3,7 @@ import { toast } from 'react-hot-toast';
 
 import { store } from 'store';
 import { BackButton } from 'components/back-button';
+import { CLICK_NAMES } from 'constants/click-names';
 import { titleGenerator } from 'utils/title-generator';
 import { setUserEmailAction } from 'store/app-data/app-slice';
 
@@ -50,8 +51,8 @@ function NewslettersPage() {
         <button
           type="button"
           onClick={submit}
-          data-click="cta-btn"
           className={classes.button}
+          data-click={CLICK_NAMES.CTA_BTN}
         >
           Join
         </button>

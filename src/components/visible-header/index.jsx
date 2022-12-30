@@ -6,6 +6,7 @@ import {
   NEWSLETTERS_PAGE_URL,
   VISIBLE_ELEMENT_PAGE_URL
 } from 'constants/app-routes';
+import { CLICK_NAMES } from 'constants/click-names';
 
 function VisibleHeader() {
   const itemClasses =
@@ -13,16 +14,16 @@ function VisibleHeader() {
   return (
     <header className="w-full shadow-md bg-slate-100 dark:bg-slate-700 px-5 mb-4">
       <ul className="flex items-center w-full mx-auto">
-        <Link data-click="visible-header-btn" to={VISIBLE_ELEMENT_PAGE_URL}>
+        <Link data-click={CLICK_NAMES.VISIBLE_HEADER_ITEM} to={VISIBLE_ELEMENT_PAGE_URL}>
           <li className={itemClasses}>Home</li>
         </Link>
-        <Link data-click="visible-header-btn" to={ABOUT_US_PAGE_URL}>
+        <Link data-click={CLICK_NAMES.VISIBLE_HEADER_ITEM} to={ABOUT_US_PAGE_URL}>
           <li className={itemClasses}>About Us</li>
         </Link>
-        <Link data-click="visible-header-btn" to={CONTACT_US_PAGE_URL}>
+        <Link data-click={CLICK_NAMES.VISIBLE_HEADER_ITEM} to={CONTACT_US_PAGE_URL}>
           <li className={itemClasses}>Contact Us</li>
         </Link>
-        <Link data-click="visible-header-btn" to={NEWSLETTERS_PAGE_URL}>
+        <Link data-click={CLICK_NAMES.VISIBLE_HEADER_ITEM} to={NEWSLETTERS_PAGE_URL}>
           <li className={itemClasses}>Newsletters</li>
         </Link>
       </ul>

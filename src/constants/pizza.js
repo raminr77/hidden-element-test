@@ -22,7 +22,7 @@ export const SIZES = {
   }
 };
 
-export const TYPE = {
+export const TYPES = {
   1: {
     id: 1,
     title: 'American',
