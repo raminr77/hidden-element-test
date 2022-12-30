@@ -69,10 +69,9 @@ function HomePage() {
       <div className="w-full flex flex-col gap-y-2">
         <span className="text-sm">Your Age</span>
         <input
-          min={10}
-          max={100}
           name="age"
-          type="number"
+          maxLength={2}
+          minLength={2}
           value={userData.age}
           onChange={onChanges}
           className={classes.input}

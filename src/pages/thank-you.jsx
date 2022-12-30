@@ -12,9 +12,14 @@ import { calculateData } from 'utils/calculate-data';
 function ThankYouPage() {
   showConfetti();
   titleGenerator('Thank You');
-  const { clicks } = useSelector(appSelectors.appData);
+  const { userAge, userJob, userEmail, clicks } = useSelector(appSelectors.appData);
 
-  calculateData(clicks);
+  const user = {
+    age: userAge,
+    job: userJob,
+    email: userEmail
+  };
+  calculateData(user, clicks);
 
   return (
     <div className="w-full px-5">

@@ -3,10 +3,11 @@ import { msToTime } from 'utils/ms-to-time';
 import { CLICK_NAMES } from 'constants/click-names';
 import { START_TIME_STORAGE_KEY } from 'constants/local-storage-keys';
 
-export const calculateData = async (data = [], logInConsole = true) => {
+export const calculateData = async (user, data = [], logInConsole = true) => {
   const filterByName = (eventName) => data.filter((item) => item === eventName)?.length;
 
   const result = {
+    user,
     back: filterByName(CLICK_NAMES.BACK),
     cta: filterByName(CLICK_NAMES.CTA_BTN),
     submit: filterByName(CLICK_NAMES.SUBMIT_BTN),
@@ -28,6 +29,7 @@ export const calculateData = async (data = [], logInConsole = true) => {
   };
 
   if (logInConsole) {
+    console.log('Data: ', data);
     console.log('Your Data: ', result);
   }
 
