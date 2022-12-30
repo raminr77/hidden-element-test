@@ -20,3 +20,8 @@ html {
 body {
   font-family: 'M PLUS 1p', sans-serif;
 }
+
+.bg-burger-menu {
+  backdrop-filter: blur(10px);
+  background-color: rgba(200, 200, 200, 0.1);
+}

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 import { store } from 'store';
 import { BackButton } from 'components/back-button';
@@ -9,6 +10,7 @@ import { setUserEmailAction } from 'store/app-data/app-slice';
 
 function NewslettersPage() {
   titleGenerator('Newsletters');
+  const navigate = useNavigate();
   const [userEmail, setUserEmail] = useState('');
 
   const submit = () => {
@@ -19,6 +21,7 @@ function NewslettersPage() {
     store.dispatch(setUserEmailAction(userEmail));
     toast.success('Your Registration Was Successful.');
     setUserEmail('');
+    navigate(-1);
   };
 
   const classes = {

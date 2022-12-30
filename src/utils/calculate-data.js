@@ -19,7 +19,10 @@ export const calculateData = async (data = [], logInConsole = true) => {
     hidden: {
       type: filterByName(CLICK_NAMES.HIDDEN_TYPE_ITEM),
       size: filterByName(CLICK_NAMES.HIDDEN_SIZE_ITEM),
-      headerItem: filterByName(CLICK_NAMES.HIDDEN_HEADER_ITEM)
+      accordion: filterByName(CLICK_NAMES.TOGGLE_ACCORDION),
+      headerItem: filterByName(CLICK_NAMES.HIDDEN_HEADER_ITEM),
+      sizeHover: filterByName(CLICK_NAMES.HIDDEN_SIZE_ITEM__HOVER),
+      typeHover: filterByName(CLICK_NAMES.HIDDEN_TYPE_ITEM__HOVER)
     },
     time: msToTime(new Date().getTime() - localStorage.getItem(START_TIME_STORAGE_KEY))
   };
