@@ -79,12 +79,14 @@ function VisiblePizzaSize({ isVisible = true }) {
                 }
               )}
             >
-              <h3 className="font-bold">{item.title}</h3>
-              <h3 className="text-sm mt-2 whitespace-nowrap text-red-800 dark:text-rose-500">
+              <h3 className="pointer-events-none font-bold">{item.title}</h3>
+              <h3 className="pointer-events-none text-sm mt-2 whitespace-nowrap text-red-800 dark:text-rose-500">
                 Price: {item.price}$
               </h3>
               {item.description && (
-                <p className="text-sm mt-2 whitespace-nowrap">{item.description}</p>
+                <p className="pointer-events-none text-sm mt-2 whitespace-nowrap">
+                  {item.description}
+                </p>
               )}
               <input
                 type="radio"
