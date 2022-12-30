@@ -66,7 +66,7 @@ function VisiblePizzaType({ isVisible = true }) {
               onMouseEnter={checkHover}
               htmlFor={item.title}
               data-click={
-                show ? CLICK_NAMES.VISIBLE_TYPE_ITEM : CLICK_NAMES.HIDDEN_TYPE_ITEM
+                isVisible ? CLICK_NAMES.VISIBLE_TYPE_ITEM : CLICK_NAMES.HIDDEN_TYPE_ITEM
               }
               className={classNames(
                 'animate__animated animate__fadeIn w-full cursor-pointer border-2 border-transparent border-solid p-4 flex flex-col rounded-lg dark:bg-slate-600 bg-slate-100 shadow-md',

@@ -69,7 +69,7 @@ function VisiblePizzaSize({ isVisible = true }) {
               onMouseEnter={checkHover}
               htmlFor={item.title}
               data-click={
-                show ? CLICK_NAMES.VISIBLE_SIZE_ITEM : CLICK_NAMES.HIDDEN_SIZE_ITEM
+                isVisible ? CLICK_NAMES.VISIBLE_SIZE_ITEM : CLICK_NAMES.HIDDEN_SIZE_ITEM
               }
               className={classNames(
                 'animate__animated animate__fadeIn cursor-pointer border-2 border-transparent border-solid p-4 flex flex-col items-center justify-center rounded-lg dark:bg-slate-600 bg-slate-100 shadow-md',
