@@ -9,7 +9,7 @@ function HiddenElementPage() {
   return (
     <div className="w-full h-screen relative p-5 overflow-hidden">
       <BurgerMenu />
-      <div className="w-full p-5 mx-auto max-w-5xl">
+      <div className="w-full p-5 mx-auto max-w-5xl mt-10">
         <VisiblePizzaSize isVisible={false} />
         <VisiblePizzaType isVisible={false} />
         <SubmitOrderButton />
