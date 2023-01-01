@@ -29,8 +29,14 @@ function HomePage() {
   };
 
   const onStart = (testName) => () => {
-    if (!userData.age || !userData.job) {
-      toast.error('Please, fill all the fields.');
+    const AGE = parseInt(userData.age);
+    // eslint-disable-next-line use-isnan
+    if (AGE.toString().length !== 2 || AGE === NaN) {
+      toast.error('Please, Enter your current age.');
+      return;
+    }
+    if (!userData.job) {
+      toast.error('Please, Enter your job title.');
       return;
     }
     if (testName === TESTS.HIDDEN_ELEMENT) {

@@ -10,6 +10,8 @@ import { CLICK_NAMES } from 'constants/click-names';
 import { updateCartAction } from 'store/app-data/app-slice';
 import { appSelectors } from 'store/app-data/app-selectors';
 
+import ARROW_IMAGE from 'assets/arrow.png';
+
 import styles from './pizza-type.module.scss';
 
 function VisiblePizzaType({ isVisible = true }) {
@@ -49,14 +51,24 @@ function VisiblePizzaType({ isVisible = true }) {
         onClick={toggle}
         data-click={CLICK_NAMES.TOGGLE_ACCORDION}
         className={classNames(
-          'w-full flex items-center justify-between border-b border-solid py-2 mb-4 rounded-t-lg',
+          'text-lg font-bold w-full flex items-center justify-between border-b-2 border-solid py-2 mb-4 rounded-t-lg',
           {
             'cursor-auto': isVisible,
-            'cursor-pointer duration-300 hover:pl-4': !isVisible
+            'cursor-pointer duration-300': !isVisible
           }
         )}
       >
         Type
+        <img
+          alt="MENU"
+          width={16}
+          height={16}
+          className={classNames('mr-3', {
+            'rotate-180': show,
+            hidden: isVisible
+          })}
+          src={ARROW_IMAGE}
+        />
       </button>
 
       {show && (

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import classNames from 'classnames';
 import { useSelector } from 'react-redux';
 
@@ -14,17 +15,19 @@ function DarkModeButton({ className }) {
   const toggleTheme = () => store.dispatch(toggleDarkMode(!darkMode));
 
   return (
-    <button
-      type="button"
+    <div
       onClick={toggleTheme}
-      data-click={CLICK_NAMES.TOGGLE_THEME}
-      className={classNames(
-        'z-50 animate__animated animate__rotateIn hover:animate-pulse flex items-center justify-center w-11 h-11 rounded-full outline-0 bg-slate-700 dark:bg-slate-50',
-        className
-      )}
+      className={classNames('flex items-center gap-x-4', className)}
     >
-      <img width={24} alt="DARK MODE" src={darkMode ? SUN_IMAGE : MOON_IMAGE} />
-    </button>
+      <p className="text-sm">{`Go To ${darkMode ? 'Light' : 'Dark'} Mode`}</p>
+      <button
+        type="button"
+        data-click={CLICK_NAMES.TOGGLE_THEME}
+        className="z-50 shadow-lg animate__animated animate__rotateIn hover:animate-pulse flex items-center justify-center w-11 h-11 rounded-full outline-0 bg-slate-700 dark:bg-slate-50"
+      >
+        <img width={24} alt="DARK MODE" src={darkMode ? SUN_IMAGE : MOON_IMAGE} />
+      </button>
+    </div>
   );
 }
 

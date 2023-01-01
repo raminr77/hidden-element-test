@@ -1,17 +1,18 @@
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
 
 import { store } from 'store';
 import { HOME_URL } from 'constants/app-routes';
 import { showConfetti } from 'utils/show-confetti';
+import { calculateData } from 'utils/calculate-data';
 import { titleGenerator } from 'utils/title-generator';
 import { resetAction } from 'store/app-data/app-slice';
 import { appSelectors } from 'store/app-data/app-selectors';
-import { calculateData } from 'utils/calculate-data';
 
 function ThankYouPage() {
-  showConfetti();
   titleGenerator('Thank You');
+  const [showResult, setShowResult] = useState(false);
   const { userAge, userJob, userEmail, clicks } = useSelector(appSelectors.appData);
 
   const user = {
@@ -19,7 +20,15 @@ function ThankYouPage() {
     job: userJob,
     email: userEmail
   };
-  calculateData(user, clicks);
+
+  const result = calculateData(user, clicks);
+  const titleClasses =
+    'font-bold text-slate-500 dark:text-slate-300 border-b border-solid border-slate-300 dark:border-slate-600 mb-2 pb-1';
+
+  useEffect(() => {
+    showConfetti();
+    calculateData(user, clicks, true);
+  }, []);
 
   return (
     <div className="w-full px-5">
@@ -40,6 +49,57 @@ function ThankYouPage() {
           Start Again
         </Link>
       </div>
+
+      {showResult && (
+        <div className="animate__animated overflow-hidden leading-9 text-sm px-5 w-full max-w-md mx-auto mt-8">
+          <p className={titleClasses}>USER</p>
+          <ul className="list-disc mb-4">
+            <li>{`User Age: ${result.user.age}`}</li>
+            <li>{`User Job: ${result.user.job}`}</li>
+          </ul>
+
+          <p className={titleClasses}>TIME</p>
+          <ul className="list-disc mb-4">
+            <li>{`Time: ${result.time}`}</li>
+          </ul>
+
+          <p className={titleClasses}>BUTTONS</p>
+          <ul className="list-disc mb-4">
+            <li>{`Back Button: ${result.back}`}</li>
+            <li>{`Submit Order Button: ${result.submit}`}</li>
+            <li>{`Call To Action Button: ${result.cta}`}</li>
+            <li>{`Change Theme Button: ${result.theme}`}</li>
+          </ul>
+
+          <p className={titleClasses}>VISIBLE</p>
+          <ul className="list-disc mb-4">
+            <li>{`Pizza Size: ${result.visible.size}`}</li>
+            <li>{`Pizza Type: ${result.visible.type}`}</li>
+            <li>{`Header Button: ${result.visible.headerItem}`}</li>
+          </ul>
+
+          <p className={titleClasses}>HIDDEN</p>
+          <ul className="list-disc">
+            <li>{`Pizza Size: ${result.hidden.size}`}</li>
+            <li>{`Pizza Type: ${result.hidden.type}`}</li>
+            <li>{`Pizza Size Hover: ${result.hidden.sizeHover}`}</li>
+            <li>{`Pizza Type Hover: ${result.hidden.typeHover}`}</li>
+            <li>{`Accordion Clicks: ${result.hidden.accordion}`}</li>
+            <li>{`Burger Menu Item: ${result.hidden.burgerItem}`}</li>
+          </ul>
+        </div>
+      )}
+
+      <button
+        type="button"
+        className="w-full mt-10 mb-10 text-sm"
+        onClick={() => setShowResult(!showResult)}
+      >
+        {`[ ${showResult ? 'Hide' : 'Show'} Result ]`}
+      </button>
+      <br />
+      <br />
+      <br />
     </div>
   );
 }
