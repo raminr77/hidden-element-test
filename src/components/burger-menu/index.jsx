@@ -17,7 +17,7 @@ function BurgerMenu() {
   const toggleMenu = () => setShow(!show);
 
   const itemClasses =
-    'w-full leading-10 px-4 border-b-2 border-solid border-transparent hover:border-slate-200 dark:hover:border-slate-800 mb-3';
+    'w-full pointer-events-none leading-10 px-4 border-b-2 border-solid border-transparent hover:border-slate-200 dark:hover:border-slate-800 mb-3';
 
   return (
     <>
